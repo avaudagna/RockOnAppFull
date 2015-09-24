@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">RockOn App</string>
     <string name="title">RockOn!</string>
-    <string name="details">Gig Details!!</string>
+    <string name="details">Gig\'s Details!!</string>
     <string name="profile_desc">Profile default image.</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_setlist">Gig\'s Setlist!!!</string>
+    <string name="title_activity_setlist">Artist\'s Setlist!!!</string>
 </resources>
