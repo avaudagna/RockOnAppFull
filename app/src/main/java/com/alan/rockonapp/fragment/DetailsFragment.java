@@ -77,6 +77,9 @@ public class DetailsFragment extends Fragment implements
         mArtistName = (TextView) view.findViewById(R.id.artist_name);
         mEventDate = (TextView) view.findViewById(R.id.event_date);
         mAddressNumber = (TextView) view.findViewById(R.id.address_number);
+        //mEventDate = (TextView) view.findViewById(R.id.artist_name2);
+        //mAddressNumber = (TextView) view.findViewById(R.id.artist_name3);
+
         mTicketRange = (TextView) view.findViewById(R.id.ticket_range);
     }
 
@@ -88,9 +91,11 @@ public class DetailsFragment extends Fragment implements
         mConcertName.setText(intent.getStringExtra(INTENT_NAME));
 
         mConcertPicture.setImageUrl(intent.getStringExtra(INTENT_MEDIUM_IMAGE_URL), mImageLoader);
-        mEventDate.setText(intent.getStringExtra(intent.getStringExtra(INTENT_EVENT_DATE)));
-        mAddressNumber.setText(intent.getStringExtra(INTENT_VENUE_STREET+","+INTENT_VENUE_CITY+","+
-                                                     INTENT_VENUE_COUNTRY));
+        mEventDate.setText(intent.getStringExtra(INTENT_EVENT_DATE));
+        mAddressNumber.setText(intent.getStringExtra(INTENT_VENUE_NAME)+" :"+
+                               intent.getStringExtra(INTENT_VENUE_STREET)+", "+
+                               intent.getStringExtra(INTENT_VENUE_CITY)+","+
+                               intent.getStringExtra(INTENT_VENUE_COUNTRY));
         mTicketRange.setText(intent.getStringExtra(INTENT_TICKET_MAX) +
                                                    "~" +
                              intent.getStringExtra(INTENT_TICKET_MIN));

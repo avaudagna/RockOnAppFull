@@ -90,11 +90,13 @@ public class ConcertParser implements ParserConst {
     {
         try {
             v.setName(venue.getString(VENUE_NAME));
-            v.setCity(venue.getString(CITY));
-            v.setCountry(venue.getString(COUNTRY));
-            v.setStreet(venue.getString(STREET));
-            v.setLatitude(venue.getString(LATITUDE));
-            v.setLongitude(venue.getString(LONGITUDE));
+
+            JSONObject location = venue.getJSONObject(LOCATION);
+            v.setCity(location.getString(CITY));
+            v.setCountry(location.getString(COUNTRY));
+            v.setStreet(location.getString(STREET));
+            v.setLatitude(location.getString(LATITUDE));
+            v.setLongitude(location.getString(LONGITUDE));
         } catch (JSONException e) {
             e.printStackTrace();
         }

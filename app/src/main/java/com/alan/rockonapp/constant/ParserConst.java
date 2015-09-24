@@ -10,6 +10,7 @@ public interface ParserConst {
     String NAME = "name";
     String ARTISTS = "artists";
     String VENUE = "venue";
+    String LOCATION = "location";
     String CONCERT_DATE = "startDate";
     String IMAGES = "images";
     String SMALL_IMAGE_URL = "small";
@@ -20,7 +21,7 @@ public interface ParserConst {
     String COUNTRY = "country";
     String STREET = "street";
     String LATITUDE = "latitude";
-    String LONGITUDE= "latitude";
+    String LONGITUDE= "longitude";
     String TICKET_PRICE = "ticket_price";
     String TICKET_MAX = "max";
     String TICKET_MIN = "min";

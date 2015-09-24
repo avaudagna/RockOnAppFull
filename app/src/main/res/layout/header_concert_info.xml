@@ -39,7 +39,7 @@
             android:text="When?!" />
 
         <TextView android:id="@+id/event_date"
-            android:layout_width="109dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:textStyle="bold"
@@ -63,7 +63,7 @@
 
     <RatingBar android:id="@+id/contact_favorite"
         android:layout_margin="8dp"
-        android:layout_width="57dp"
+        android:layout_width="42dp"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
