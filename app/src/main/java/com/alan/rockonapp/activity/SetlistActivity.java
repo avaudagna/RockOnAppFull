@@ -95,6 +95,7 @@ public class SetlistActivity extends AppCompatActivity implements
 
         songListActivity.putExtra(INTENT_SONG_LIST, setlist.getSongList().toString()
                                                     .replace(',', '\n'));
+        songListActivity.putExtra(INTENT_EVENT_DATE, setlist.getEventDate());
 
         startActivity(songListActivity);
     }
