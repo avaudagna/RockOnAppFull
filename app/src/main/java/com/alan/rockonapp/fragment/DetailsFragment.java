@@ -1,6 +1,7 @@
 package com.alan.rockonapp.fragment;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -96,6 +97,18 @@ public class DetailsFragment extends Fragment implements
                                intent.getStringExtra(INTENT_VENUE_STREET)+", "+
                                intent.getStringExtra(INTENT_VENUE_CITY)+","+
                                intent.getStringExtra(INTENT_VENUE_COUNTRY));
+        mAddressNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String venueLatitude =intent.getStringExtra(INTENT_VENUE_LATITUDE);
+                String venueLongitude =intent.getStringExtra(INTENT_VENUE_LONGITUDE);
+
+                Uri gmmIntentUri = Uri.parse("geo:"+venueLatitude+","+venueLongitude);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
         mTicketRange.setText(intent.getStringExtra(INTENT_TICKET_MAX) +
                                                    "~" +
                              intent.getStringExtra(INTENT_TICKET_MIN));

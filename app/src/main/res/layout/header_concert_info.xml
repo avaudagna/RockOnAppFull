@@ -57,6 +57,7 @@
             android:layout_marginBottom="16dp"
             android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/venue"
             android:text="Calle Falsa 1234" />
 
     </LinearLayout>
