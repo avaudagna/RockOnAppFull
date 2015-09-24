@@ -50,6 +50,7 @@ public class DetailsFragment extends Fragment implements
     private TextView mAddressNumber;
     private TextView mTicketRange;
     private TextView mEventDate;
+    private ImageLoader mImageLoader= AppController.getInstance(getContext()).getImageLoader();;
 
 
     public DetailsFragment() {}
@@ -86,7 +87,7 @@ public class DetailsFragment extends Fragment implements
     private void bindViews(@NonNull final Intent intent) {
         mConcertName.setText(intent.getStringExtra(INTENT_NAME));
 
-
+        mConcertPicture.setImageUrl(intent.getStringExtra(INTENT_MEDIUM_IMAGE_URL), mImageLoader);
         mEventDate.setText(intent.getStringExtra(intent.getStringExtra(INTENT_EVENT_DATE)));
         mAddressNumber.setText(intent.getStringExtra(INTENT_VENUE_STREET+","+INTENT_VENUE_CITY+","+
                                                      INTENT_VENUE_COUNTRY));
@@ -138,9 +139,6 @@ public class DetailsFragment extends Fragment implements
         try {
             if(response.getBoolean(FAVORITE))
                 mConcertFavorite.setRating(1);
-
-            mConcertPicture.setImageUrl(response.getString(MEDIUM_IMAGE_URL), loader);
-
             //mAddressNumber.setText(getAddressFromJson(response.getJSONObject(ADDRESS)));
 
         } catch (JSONException ex) {

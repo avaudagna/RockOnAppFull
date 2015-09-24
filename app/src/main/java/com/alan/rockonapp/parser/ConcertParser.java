@@ -36,8 +36,12 @@ public class ConcertParser implements ParserConst {
                 Concert concerts = new Concert();
                 concerts.setName(concert.getString(CONCERT_NAME))
                         .setArtistName(concert.getJSONArray(ARTISTS).getJSONObject(0).getString(NAME));
-                if(concert.has(IMAGES))
+                if(concert.has(IMAGES)) {
                     concerts.setSmallImageUrl(concert.getJSONObject(IMAGES).getString(SMALL_IMAGE_URL));
+                    concerts.setMediumImageUrl(concert.getJSONObject(IMAGES).getString(MEDIUM_IMAGE_URL));
+                    concerts.setLargeImageUrl(concert.getJSONObject(IMAGES).getString(LARGE_IMAGE_URL));
+
+                }
 
                 if(concert.has(VENUE)) {
                     Venue venue = new Venue();

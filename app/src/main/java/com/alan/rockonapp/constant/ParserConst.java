@@ -13,8 +13,8 @@ public interface ParserConst {
     String CONCERT_DATE = "startDate";
     String IMAGES = "images";
     String SMALL_IMAGE_URL = "small";
-    String MEDIUM_IMAGE_URL = "small";
-    String LARGE_IMAGE_URL = "largeImageURL";
+    String MEDIUM_IMAGE_URL = "medium";
+    String LARGE_IMAGE_URL = "large";
     String FAVORITE = "favorite";
     String CITY = "city";
     String COUNTRY = "country";
